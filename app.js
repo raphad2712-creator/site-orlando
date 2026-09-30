@@ -16,6 +16,7 @@ const translations={
 
 const SUPABASE_URL='https://bmoeknvuxrndlfairyth.supabase.co';
 const SUPABASE_KEY='sb_publishable_lagn5A2PP6V6kT_G9hvM3Q_kzIamfaz';
+document.querySelectorAll('img[src*="/wp-content/uploads/"]').forEach(image=>image.addEventListener('error',()=>{image.src='assets/photo-placeholder.svg';image.removeAttribute('srcset');image.closest('[data-full]')?.setAttribute('data-full','assets/photo-placeholder.svg')},{once:true}));
 const state={lang:localStorage.getItem('orh-language')||'pt',view:new Date(new Date().getFullYear(),new Date().getMonth(),1),start:null,end:null,reserved:new Set()};
 const ptDefaults={};document.querySelectorAll('[data-i18n]').forEach(el=>ptDefaults[el.dataset.i18n]=el.textContent);
 ptDefaults['calendar.select']='Selecione';

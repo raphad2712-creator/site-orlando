@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Administração | Orlando Rent Homes</title>
+  <style>
+    :root{--navy:#073a50;--aqua:#1eb5c9;--ink:#132630;--muted:#60727a;--line:#dbe3e4;--bg:#eef6f7;--error:#a02c2c}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}.wrap{width:min(760px,calc(100% - 28px));margin:32px auto}.top{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:22px}.top a{color:var(--navy);font-weight:800;text-decoration:none}.card{background:#fff;border-radius:22px;padding:clamp(22px,5vw,40px);box-shadow:0 20px 50px rgba(5,43,59,.12)}h1{font:500 clamp(2rem,6vw,3.5rem)/1.05 Georgia,serif;color:var(--navy);margin:0 0 10px}h2{color:var(--navy);font-size:1.08rem}p{color:var(--muted)}.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0 14px}.login .fields{grid-template-columns:1fr}label{font-size:.86rem;font-weight:800;color:var(--navy)}input{width:100%;display:block;margin-top:7px;min-height:50px;border:1px solid var(--line);border-radius:12px;padding:0 13px;font:inherit}.actions{display:flex;gap:10px;flex-wrap:wrap}button{min-height:48px;border:0;border-radius:999px;padding:0 21px;font-weight:800;cursor:pointer}.primary{background:var(--aqua);color:#052b3b}.secondary{background:#fff;color:var(--navy);border:1px solid var(--line)}button:disabled{opacity:.55;cursor:wait}.status{min-height:24px;margin:14px 0}.status.error{color:var(--error)}.panel[hidden],.login[hidden]{display:none}.reserved{margin-top:28px;border-top:1px solid var(--line);padding-top:20px}.reserved-list{display:flex;flex-wrap:wrap;gap:8px}.date-chip{background:#edf5f6;border:1px solid #d8e6e8;border-radius:999px;padding:7px 11px;font-size:.84rem;color:var(--navy)}.empty{font-size:.92rem;color:var(--muted)}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:15px}.panel-head button{min-height:40px;padding:0 16px}@media(max-width:560px){.wrap{margin:18px auto}.fields{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top"><strong>Orlando Rent Homes</strong><a href="../">Voltar ao site</a></div>
+    <section class="card login" id="login-card">
+      <h1>Área do proprietário</h1>
+      <p>Entre com a conta autorizada para administrar as datas reservadas.</p>
+      <form id="login-form">
+        <div class="fields">
+          <label>E-mail<input id="email" type="email" value="raphadd2712@gmail.com" autocomplete="username" required></label>
+          <label>Senha<input id="password" type="password" autocomplete="current-password" required></label>
+        </div>
+        <button class="primary" id="login-button" type="submit">Entrar</button>
+      </form>
+      <p class="status" id="login-status" aria-live="polite"></p>
+    </section>
+    <section class="card panel" id="panel" hidden>
+      <div class="panel-head"><div><h1>Calendário</h1><p>Marque os dias que já estão alugados.</p></div><button class="secondary" id="logout" type="button">Sair</button></div>
+      <div class="fields">
+        <label>Primeiro dia<input id="start" type="date"></label>
+        <label>Último dia<input id="end" type="date"></label>
+      </div>
+      <div class="actions"><button class="primary" id="save" type="button">Marcar como reservado</button><button class="secondary" id="free" type="button">Liberar período</button></div>
+      <p class="status" id="status" aria-live="polite"></p>
+      <div class="reserved"><h2>Dias atualmente reservados</h2><div class="reserved-list" id="reserved-list"><span class="empty">Carregando…</span></div></div>
+    </section>
+  </main>
+  <script>
+    const SUPABASE_URL='https://bmoeknvuxrndlfairyth.supabase.co';
+    const SUPABASE_KEY='sb_publishable_lagn5A2PP6V6kT_G9hvM3Q_kzIamfaz';
+    const loginCard=document.querySelector('#login-card'),panel=document.querySelector('#panel'),loginStatus=document.querySelector('#login-status'),statusEl=document.querySelector('#status'),list=document.querySelector('#reserved-list');
+    let accessToken=sessionStorage.getItem('orh-admin-token')||'';
+    function showPanel(){loginCard.hidden=true;panel.hidden=false;loadReservations()}
+    function showLogin(){accessToken='';sessionStorage.removeItem('orh-admin-token');panel.hidden=true;loginCard.hidden=false}
+    function datesBetween(start,end){const dates=[],current=new Date(start+'T12:00:00'),last=new Date(end+'T12:00:00');while(current<=last){dates.push(current.toISOString().slice(0,10));current.setDate(current.getDate()+1)}return dates}
+    function fmt(date){return new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(date+'T12:00:00Z'))}
+    async function loadReservations(){const response=await fetch(`${SUPABASE_URL}/rest/v1/reservas?select=data&order=data.asc`,{headers:{apikey:SUPABASE_KEY}});if(!response.ok){statusEl.textContent='Não foi possível carregar as reservas.';statusEl.className='status error';return}const rows=await response.json();list.innerHTML=rows.length?rows.map(row=>`<span class="date-chip">${fmt(row.data)}</span>`).join(''):'<span class="empty">Nenhuma data reservada.</span>'}
+    document.querySelector('#login-form').addEventListener('submit',async event=>{event.preventDefault();const button=document.querySelector('#login-button');button.disabled=true;loginStatus.textContent='Entrando…';loginStatus.className='status';const response=await fetch(`${SUPABASE_URL}/auth/v1/token?grant_type=password`,{method:'POST',headers:{apikey:SUPABASE_KEY,'content-type':'application/json'},body:JSON.stringify({email:document.querySelector('#email').value.trim(),password:document.querySelector('#password').value})});const data=await response.json();button.disabled=false;if(!response.ok){loginStatus.textContent='E-mail ou senha incorretos.';loginStatus.className='status error';return}accessToken=data.access_token;sessionStorage.setItem('orh-admin-token',accessToken);loginStatus.textContent='';showPanel()});
+    async function change(mode){const start=document.querySelector('#start').value,end=document.querySelector('#end').value;if(!start||!end||end<start){statusEl.textContent='Escolha um período válido.';statusEl.className='status error';return}const dates=datesBetween(start,end),button=document.querySelector(mode==='save'?'#save':'#free');button.disabled=true;statusEl.textContent='Salvando…';statusEl.className='status';let response;if(mode==='save'){response=await fetch(`${SUPABASE_URL}/rest/v1/reservas?on_conflict=data`,{method:'POST',headers:{apikey:SUPABASE_KEY,Authorization:`Bearer ${accessToken}`,'content-type':'application/json',Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify(dates.map(data=>({data,observacao:'Reserva'})))})}else{response=await fetch(`${SUPABASE_URL}/rest/v1/reservas?data=in.(${dates.join(',')})`,{method:'DELETE',headers:{apikey:SUPABASE_KEY,Authorization:`Bearer ${accessToken}`}})}button.disabled=false;if(response.status===401||response.status===403){showLogin();loginStatus.textContent='Sua sessão expirou. Entre novamente.';loginStatus.className='status error';return}if(!response.ok){statusEl.textContent='Não foi possível salvar. Verifique a configuração do Supabase.';statusEl.className='status error';return}statusEl.textContent=mode==='save'?'Período marcado como reservado.':'Período liberado.';loadReservations()}
+    document.querySelector('#save').addEventListener('click',()=>change('save'));
+    document.querySelector('#free').addEventListener('click',()=>change('free'));
+    document.querySelector('#logout').addEventListener('click',showLogin);
+    if(accessToken)showPanel();else showLogin();
+  </script>
+</body>
+</html>

@@ -1,15 +1,13 @@
 # Orlando Rent Homes
 
-Redesign moderno, responsivo e bilíngue do site Orlando Rent Homes.
+Site bilíngue para a casa de temporada no Bella Vida Resort, em Kissimmee.
 
 ## Recursos
 
 - Português e inglês com troca instantânea
-- Calendário para seleção de check-in e check-out
+- Calendário público com datas reservadas bloqueadas
+- Área protegida do proprietário em `/admin`
 - Solicitação de orçamento pelo WhatsApp
-- Galeria de fotos com visualização ampliada
-- Layout responsivo e otimizado para carregamento rápido
+- Galeria, animações e layout responsivo
 
-## Como abrir
-
-Abra `index.html` no navegador ou use um servidor estático local.
+Site publicado: https://orlando-rent-homes.raphadd2712.chatgpt.site

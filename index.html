@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073a50">
+  <meta name="description" content="Casa de temporada em Orlando, no Bella Vida Resort, com 4 quartos, piscina privativa e localização próxima à Disney.">
+  <title>Orlando Rent Homes | Sua casa perto da Disney</title>
+  <link rel="icon" href="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/logo-orlando-rent-homes.png">
+  <link rel="preconnect" href="https://www.orlandorenthomes.com">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header" id="top">
+    <div class="header-inner shell">
+      <a class="brand" href="#top" aria-label="Orlando Rent Homes - início">
+        <img src="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/logo-orlando-rent-homes.png" alt="Orlando Rent Homes" width="180" height="78">
+      </a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#home" data-i18n="nav.home">Início</a>
+        <a href="#house" data-i18n="nav.house">A casa</a>
+        <a href="#gallery" data-i18n="nav.gallery">Fotos</a>
+        <a href="#location" data-i18n="nav.location">Localização</a>
+        <a href="#about" data-i18n="nav.about">Quem somos</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-picker">
+          <button class="language-button" type="button" aria-expanded="false" aria-controls="language-menu" aria-label="Escolher idioma">
+            <span class="language-globe" aria-hidden="true">◎</span>
+            <span class="language-flag" id="language-flag" aria-hidden="true">🇧🇷</span>
+            <span class="language-name" id="language-name">Português</span>
+            <span class="language-code" id="language-code" aria-hidden="true">PT</span>
+            <svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1 5 5 5-5"/></svg>
+          </button>
+          <div class="language-menu" id="language-menu" role="menu" hidden>
+            <button type="button" role="menuitem" data-language="pt"><span aria-hidden="true">🇧🇷</span><span><strong>Português</strong><small>Brasil</small></span><i aria-hidden="true">✓</i></button>
+            <button type="button" role="menuitem" data-language="en"><span aria-hidden="true">🇺🇸</span><span><strong>English</strong><small>United States</small></span><i aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <a class="button button-small" href="#booking" data-i18n="nav.book">Reservar</a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação móvel" hidden>
+      <a href="#home" data-i18n="nav.home">Início</a>
+      <a href="#house" data-i18n="nav.house">A casa</a>
+      <a href="#gallery" data-i18n="nav.gallery">Fotos</a>
+      <a href="#location" data-i18n="nav.location">Localização</a>
+      <a href="#about" data-i18n="nav.about">Quem somos</a>
+      <a href="#booking" data-i18n="nav.book">Reservar</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <img class="hero-image" src="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/Pool-scaled.jpg" alt="Piscina privativa da casa em Orlando" fetchpriority="high">
+      <div class="hero-overlay"></div>
+      <div class="hero-content shell">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Kissimmee · Flórida</p>
+        <h1 id="hero-title" data-i18n="hero.title">Sua casa em Orlando, perto de tudo.</h1>
+        <p data-i18n="hero.text">Conforto para até 8 pessoas, piscina privativa e a Disney a poucos minutos.</p>
+        <div class="hero-actions">
+          <a class="button" href="#booking" data-i18n="hero.cta">Ver datas disponíveis</a>
+          <a class="text-link light" href="#gallery"><span data-i18n="hero.photos">Conhecer a casa</span></a>
+        </div>
+      </div>
+      <div class="quick-facts shell" aria-label="Destaques da casa">
+        <div><strong>8</strong><span data-i18n="facts.guests">hóspedes</span></div>
+        <div><strong>4</strong><span data-i18n="facts.bedrooms">quartos</span></div>
+        <div><strong>3</strong><span data-i18n="facts.bathrooms">banheiros</span></div>
+        <div><strong>10 mi</strong><span data-i18n="facts.disney">da Disney</span></div>
+      </div>
+    </section>
+
+    <section class="booking-section section" id="booking" aria-labelledby="booking-title">
+      <div class="shell booking-grid">
+        <div class="booking-copy">
+          <p class="eyebrow dark" data-i18n="booking.eyebrow">Planeje sua estadia</p>
+          <h2 id="booking-title" data-i18n="booking.title">Escolha as datas da sua viagem</h2>
+          <p data-i18n="booking.text">Selecione a entrada e a saída. Confirmaremos a disponibilidade e enviaremos o orçamento pelo WhatsApp.</p>
+          <div class="selection-summary" aria-live="polite">
+            <div><span data-i18n="booking.checkin">Entrada</span><strong id="checkin-label">Selecione</strong></div>
+            <div><span data-i18n="booking.checkout">Saída</span><strong id="checkout-label">Selecione</strong></div>
+          </div>
+          <button class="button button-wide" id="quote-button" type="button" disabled data-i18n="booking.quote">Solicitar orçamento</button>
+          <p class="booking-note" data-i18n="booking.note">A reserva será confirmada após a resposta do anfitrião.</p>
+        </div>
+        <div class="calendar-card">
+          <div class="calendar-toolbar">
+            <button id="calendar-prev" type="button" aria-label="Mês anterior">←</button>
+            <strong id="calendar-title"></strong>
+            <button id="calendar-next" type="button" aria-label="Próximo mês">→</button>
+          </div>
+          <div class="calendar" id="calendar" aria-label="Calendário de reservas"></div>
+          <div class="calendar-legend">
+            <span><i class="legend-dot available"></i><span data-i18n="calendar.available">Disponível para consulta</span></span>
+            <span><i class="legend-dot selected"></i><span data-i18n="calendar.selected">Selecionado</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section house-section" id="house">
+      <div class="shell intro-grid">
+        <div>
+          <p class="eyebrow dark" data-i18n="house.eyebrow">Bella Vida Resort</p>
+          <h2 data-i18n="house.title">Espaço, privacidade e conforto para toda a família.</h2>
+        </div>
+        <p class="lead" data-i18n="house.text">Uma casa completa de 4 quartos, pensada para você descansar depois dos parques, cozinhar com tranquilidade e aproveitar Orlando no seu ritmo.</p>
+      </div>
+      <div class="shell feature-grid">
+        <article><span class="icon">⌂</span><h3 data-i18n="features.poolTitle">Piscina privativa</h3><p data-i18n="features.poolText">Área protegida e opção de aquecimento para aproveitar em qualquer época.</p></article>
+        <article><span class="icon">◇</span><h3 data-i18n="features.kitchenTitle">Cozinha completa</h3><p data-i18n="features.kitchenText">Utensílios, eletrodomésticos e bancada integrada às salas de estar e jantar.</p></article>
+        <article><span class="icon">◉</span><h3 data-i18n="features.resortTitle">Estrutura de resort</h3><p data-i18n="features.resortText">Clubhouse, piscina, spa, academia, playground, quadras e segurança 24h.</p></article>
+        <article><span class="icon">⌁</span><h3 data-i18n="features.connectedTitle">Tudo conectado</h3><p data-i18n="features.connectedText">Wi-Fi, TV a cabo, ar-condicionado central e estacionamento em frente à casa.</p></article>
+      </div>
+    </section>
+
+    <section class="gallery-section section" id="gallery" aria-labelledby="gallery-title">
+      <div class="shell section-heading">
+        <div><p class="eyebrow" data-i18n="gallery.eyebrow">Conheça cada detalhe</p><h2 id="gallery-title" data-i18n="gallery.title">Uma casa feita para viver bons momentos.</h2></div>
+        <button class="text-link" id="show-all" type="button"><span data-i18n="gallery.cta">Ver todas as fotos</span></button>
+      </div>
+      <div class="shell gallery-grid">
+        <button class="gallery-item gallery-main" data-full="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/Pool-scaled.jpg"><img src="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/Pool-scaled.jpg" alt="Piscina privativa" loading="lazy"></button>
+        <button class="gallery-item" data-full="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/Front-scaled.jpg"><img src="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/Front-scaled.jpg" alt="Fachada da casa" loading="lazy"></button>
+        <button class="gallery-item" data-full="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/Dining-Area2-scaled.jpg"><img src="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/Dining-Area2-scaled.jpg" alt="Sala de jantar" loading="lazy"></button>
+        <button class="gallery-item" data-full="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/Breakfast-Bat-scaled.jpg"><img src="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/Breakfast-Bat-scaled.jpg" alt="Cozinha e bancada" loading="lazy"></button>
+        <button class="gallery-item" data-full="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/Bedroom-Copia-scaled.jpg"><img src="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/Bedroom-Copia-scaled.jpg" alt="Quarto confortável" loading="lazy"></button>
+      </div>
+    </section>
+
+    <section class="section location-section" id="location">
+      <div class="shell location-grid">
+        <div class="location-card">
+          <p class="eyebrow dark" data-i18n="location.eyebrow">Localização estratégica</p>
+          <h2 data-i18n="location.title">Mais tempo aproveitando. Menos tempo no caminho.</h2>
+          <p data-i18n="location.text">No Bella Vida Resort, em Kissimmee, perto dos parques, outlets, supermercados e restaurantes.</p>
+          <ul class="distance-list">
+            <li><span>Disney's Hollywood Studios</span><strong>10,6 mi</strong></li>
+            <li><span>Disney Springs</span><strong>5,8 mi</strong></li>
+            <li><span>Walmart</span><strong>0,3 mi</strong></li>
+            <li><span>Universal Studios</span><strong>15,6 mi</strong></li>
+          </ul>
+        </div>
+        <img src="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/quemsomos-casa-proximo-a-disney-1024x344.jpg" alt="Casa Orlando Rent Homes no Bella Vida Resort" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="shell about-grid">
+        <div>
+          <p class="eyebrow" data-i18n="about.eyebrow">De brasileiros para brasileiros</p>
+          <h2 data-i18n="about.title">A experiência de Orlando com o conforto de casa.</h2>
+        </div>
+        <div>
+          <p data-i18n="about.text1">Somos um casal de brasileiros apaixonado por Orlando. Depois de muitas estadias em hotéis, percebemos que faltava espaço, privacidade e a liberdade de viver a viagem no nosso ritmo.</p>
+          <p data-i18n="about.text2">Por isso, preparamos esta casa no Bella Vida Resort para receber famílias com cuidado, segurança e tudo o que também gostaríamos de encontrar nas nossas férias.</p>
+          <a class="button button-outline" href="#booking" data-i18n="about.cta">Quero conhecer as datas</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="shell cta-inner">
+        <div><p class="eyebrow" data-i18n="cta.eyebrow">Sua viagem começa aqui</p><h2 data-i18n="cta.title">Pronto para viver Orlando do seu jeito?</h2></div>
+        <a class="button button-light" href="#booking" data-i18n="cta.button">Consultar disponibilidade</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand"><img src="https://www.orlandorenthomes.com/wp-content/uploads/2021/06/logo-orlando-rent-homes.png" alt="Orlando Rent Homes" width="180" height="78"><p data-i18n="footer.text">Conforto, privacidade e uma localização perfeita para suas férias em Orlando.</p></div>
+      <div><h3 data-i18n="footer.links">Links</h3><a href="#house" data-i18n="nav.house">A casa</a><a href="#gallery" data-i18n="nav.gallery">Fotos</a><a href="#booking" data-i18n="nav.book">Reservar</a></div>
+      <div><h3 data-i18n="footer.contact">Contato</h3><a href="https://wa.me/5511999066659" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.instagram.com/orlando_rent_homes/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/orlandorenthomes" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+    <div class="shell footer-bottom"><span>© <span id="year"></span> Orlando Rent Homes.</span><span>Desenvolvido por <a href="https://a2a.com.br/" target="_blank" rel="noopener">A2A Comunicação</a></span></div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5511999066659" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L0 24l6.5-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.4Zm-8.3 18.2h-.1a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.2-3.7-.3-.6.3-.5.9-1.7.1-.2.1-.4 0-.6l-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9 0 1.7 1.2 3.3 1.4 3.6.1.2 2.4 3.7 5.9 5.2 2.2.9 3.1 1 4.2.8.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>
+  </a>
+
+  <dialog class="lightbox" id="lightbox">
+    <button type="button" class="lightbox-close" aria-label="Fechar">×</button>
+    <button type="button" class="lightbox-prev" aria-label="Foto anterior">←</button>
+    <img id="lightbox-image" alt="Foto ampliada da casa">
+    <button type="button" class="lightbox-next" aria-label="Próxima foto">→</button>
+  </dialog>
+</body>
+</html>

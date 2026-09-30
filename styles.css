@@ -12,3 +12,5 @@
 
 .whatsapp-float svg{width:31px;height:31px;fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round}.whatsapp-bubble{stroke-width:1.65}.whatsapp-phone{stroke-width:1.5}
 @media(prefers-reduced-motion:reduce){.hero-image,.hero-content>*,.quick-facts,.whatsapp-float{animation:none!important}.reveal{opacity:1;transform:none}}
+
+.owner-link{display:block;width:max-content;margin:15px auto 0;color:var(--navy);font-size:.82rem;font-weight:800;text-decoration:underline;text-underline-offset:4px}.legend-dot.reserved{background:#b8c0c4}.calendar-day.is-reserved{background:#edf0f1;color:#8b969b;text-decoration:line-through}.calendar-status{min-height:22px;margin:13px 0 0;color:#9a3d3d;font-size:.82rem;text-align:center}

@@ -28,15 +28,13 @@
       <div class="header-actions">
         <div class="language-picker">
           <button class="language-button" type="button" aria-expanded="false" aria-controls="language-menu" aria-label="Escolher idioma">
-            <span class="language-globe" aria-hidden="true">◎</span>
-            <span class="language-flag" id="language-flag" aria-hidden="true">🇧🇷</span>
-            <span class="language-name" id="language-name">Português</span>
             <span class="language-code" id="language-code" aria-hidden="true">PT</span>
+            <span class="language-name" id="language-name">Português</span>
             <svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1 5 5 5-5"/></svg>
           </button>
           <div class="language-menu" id="language-menu" role="menu" hidden>
-            <button type="button" role="menuitem" data-language="pt"><span aria-hidden="true">🇧🇷</span><span><strong>Português</strong><small>Brasil</small></span><i aria-hidden="true">✓</i></button>
-            <button type="button" role="menuitem" data-language="en"><span aria-hidden="true">🇺🇸</span><span><strong>English</strong><small>United States</small></span><i aria-hidden="true"></i></button>
+            <button type="button" role="menuitem" data-language="pt"><span class="language-option-code" aria-hidden="true">PT</span><span><strong>Português</strong><small>Brasil</small></span><i aria-hidden="true">✓</i></button>
+            <button type="button" role="menuitem" data-language="en"><span class="language-option-code" aria-hidden="true">EN</span><span><strong>English</strong><small>United States</small></span><i aria-hidden="true"></i></button>
           </div>
         </div>
         <a class="button button-small" href="#booking" data-i18n="nav.book">Reservar</a>
@@ -183,7 +181,10 @@
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/5511999066659" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L0 24l6.5-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.4Zm-8.3 18.2h-.1a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.2-3.7-.3-.6.3-.5.9-1.7.1-.2.1-.4 0-.6l-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9 0 1.7 1.2 3.3 1.4 3.6.1.2 2.4 3.7 5.9 5.2 2.2.9 3.1 1 4.2.8.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path class="whatsapp-bubble" d="M12 2.25a9.5 9.5 0 0 0-8.28 14.17L2.5 21.75l5.46-1.18A9.5 9.5 0 1 0 12 2.25Z"/>
+      <path class="whatsapp-phone" d="M8.35 7.05c.22-.35.43-.42.7-.42h.48c.24 0 .42.1.54.38l.96 2.27c.1.25.06.48-.1.69l-.7.9c-.18.23-.14.48 0 .72.6 1.08 1.5 1.96 2.59 2.55.25.14.5.17.72-.02l.96-.8c.2-.17.45-.2.7-.1l2.18 1.02c.28.13.4.31.4.55v.47c0 .3-.14.58-.4.83-.58.53-1.38.82-2.2.82-1.42 0-3.36-.78-5.18-2.48-1.8-1.68-2.78-3.77-2.78-5.17 0-.8.34-1.66 1.13-2.2Z"/>
+    </svg>
   </a>
 
   <dialog class="lightbox" id="lightbox">

@@ -5,7 +5,6 @@ const translations={
     'facts.guests':'guests','facts.bedrooms':'bedrooms','facts.bathrooms':'bathrooms','facts.disney':'from Disney',
     'booking.eyebrow':'Plan your stay','booking.title':'Choose your travel dates','booking.text':'Select check-in and check-out. We will confirm availability and send a quote by WhatsApp.','booking.checkin':'Check-in','booking.checkout':'Check-out','booking.quote':'Request a quote','booking.note':'Your booking will be confirmed after the host replies.',
     'calendar.available':'Available for inquiry','calendar.selected':'Selected','calendar.reserved':'Reserved','calendar.select':'Select',
-    'booking.manage':'Owner area',
     'house.eyebrow':'Bella Vida Resort','house.title':'Space, privacy and comfort for the whole family.','house.text':'A complete 4-bedroom home, designed for relaxing after the parks, cooking with ease and enjoying Orlando at your own pace.',
     'features.poolTitle':'Private pool','features.poolText':'Screened area and optional heating, so you can enjoy it any time of year.','features.kitchenTitle':'Full kitchen','features.kitchenText':'Cookware, appliances and a breakfast bar connected to the living and dining rooms.','features.resortTitle':'Resort amenities','features.resortText':'Clubhouse, pool, spa, gym, playground, courts and 24-hour security.','features.connectedTitle':'Everything connected','features.connectedText':'Wi-Fi, cable TV, central air conditioning and parking in front of the house.',
     'gallery.eyebrow':'See every detail','gallery.title':'A home made for great moments.','gallery.cta':'View all photos',
@@ -15,8 +14,11 @@ const translations={
   }
 };
 
+const SUPABASE_URL='https://bmoeknvuxrndlfairyth.supabase.co';
+const SUPABASE_KEY='sb_publishable_lagn5A2PP6V6kT_G9hvM3Q_kzIamfaz';
 const state={lang:localStorage.getItem('orh-language')||'pt',view:new Date(new Date().getFullYear(),new Date().getMonth(),1),start:null,end:null,reserved:new Set()};
 const ptDefaults={};document.querySelectorAll('[data-i18n]').forEach(el=>ptDefaults[el.dataset.i18n]=el.textContent);
+ptDefaults['calendar.select']='Selecione';
 
 function t(key){return state.lang==='en'?(translations.en[key]||ptDefaults[key]||key):(ptDefaults[key]||key)}
 function setLanguage(lang){state.lang=lang;localStorage.setItem('orh-language',lang);document.documentElement.lang=lang==='en'?'en-US':'pt-BR';document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=t(el.dataset.i18n)});document.querySelector('#language-name').textContent=lang==='en'?'English':'Português';document.querySelector('#language-code').textContent=lang==='en'?'EN':'PT';document.querySelector('.language-button').setAttribute('aria-label',lang==='en'?'Choose language':'Escolher idioma');document.querySelectorAll('[data-language]').forEach(option=>{option.classList.toggle('is-active',option.dataset.language===lang);option.querySelector('i').textContent=option.dataset.language===lang?'✓':''});document.title=lang==='en'?'Orlando Rent Homes | Your home near Disney':'Orlando Rent Homes | Sua casa perto da Disney';renderCalendar();updateSelection()}
@@ -49,6 +51,6 @@ const revealTargets=document.querySelectorAll('.booking-copy,.calendar-card,.int
 revealTargets.forEach((element,index)=>{element.classList.add('reveal');element.style.setProperty('--reveal-delay',`${Math.min(index%5,4)*70}ms`)});
 if('IntersectionObserver'in window){const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target)}})},{threshold:.13,rootMargin:'0px 0px -40px'});revealTargets.forEach(element=>revealObserver.observe(element))}else{revealTargets.forEach(element=>element.classList.add('is-visible'))}
 
-async function loadReservations(){try{const response=await fetch('/api/reservations');if(!response.ok)throw new Error('unavailable');const data=await response.json();state.reserved=new Set((data.dates||[]).map(item=>item.date));renderCalendar()}catch(error){document.querySelector('#calendar-status').textContent=state.lang==='en'?'Availability is temporarily unavailable. Please contact us.':'A disponibilidade está temporariamente indisponível. Entre em contato.'}}
+async function loadReservations(){try{const response=await fetch(`${SUPABASE_URL}/rest/v1/reservas?select=data&order=data.asc`,{headers:{apikey:SUPABASE_KEY}});if(!response.ok)throw new Error('unavailable');const data=await response.json();state.reserved=new Set(data.map(item=>item.data));renderCalendar()}catch(error){document.querySelector('#calendar-status').textContent=state.lang==='en'?'Availability is temporarily unavailable. Please contact us.':'A disponibilidade está temporariamente indisponível. Entre em contato.'}}
 
 document.querySelector('#year').textContent=new Date().getFullYear();setLanguage(state.lang);loadReservations();

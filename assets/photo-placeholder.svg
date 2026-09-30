@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Orlando Rent Homes">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#073a50"/><stop offset="1" stop-color="#12829a"/></linearGradient><radialGradient id="sun"><stop stop-color="#fff" stop-opacity=".24"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/><circle cx="1260" cy="160" r="500" fill="url(#sun)"/>
+  <path d="M220 690L800 250l580 440v180H980V610H620v260H220z" fill="none" stroke="#fff" stroke-width="34" stroke-linejoin="round" opacity=".82"/>
+  <path d="M110 890h1380" stroke="#fff" stroke-width="18" stroke-linecap="round" opacity=".35"/>
+  <text x="800" y="955" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="48" font-weight="700" letter-spacing="9">ORLANDO RENT HOMES</text>
+</svg>

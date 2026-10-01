@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 150" role="img" aria-labelledby="title desc">
   <title id="title">Orlando Rent Homes</title>
   <desc id="desc">Logotipo Orlando Rent Homes</desc>
-  <rect width="360" height="150" fill="#fff"/>
   <g fill="#c62935">
     <circle cx="262" cy="38" r="29"/><circle cx="318" cy="49" r="27"/>
     <path d="M257 58c0-13 11-24 24-24s24 11 24 24v49h-48z"/>

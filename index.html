@@ -3,20 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#073a50">
-  <meta name="description" content="Casa de temporada em Orlando, no Bella Vida Resort, com 4 quartos, piscina privativa e localização próxima à Disney.">
-  <title>Orlando Rent Homes | Sua casa perto da Disney</title>
+  <meta name="theme-color" content="#0c5363">
+  <meta name="description" content="Casa de temporada em Orlando no Bella Vida Resort, com 4 quartos, piscina privativa, estrutura de resort e fácil acesso aos principais parques, compras e restaurantes.">
+  <title>Orlando Rent Homes | Casa de temporada em Orlando</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=6">
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
   <header class="site-header" id="top">
     <div class="header-inner shell">
-      <a class="brand" href="#top" aria-label="Orlando Rent Homes - início">
-        <img src="assets/logo-orlando-rent-homes-transparente.png?v=1" alt="Orlando Rent Homes" width="1774" height="887">
+      <a class="brand" href="#home" aria-label="Orlando Rent Homes - início">
+        <img src="assets/logo-orlando-rent-homes-transparente.png?v=2" alt="Orlando Rent Homes">
       </a>
+
       <nav class="desktop-nav" aria-label="Navegação principal">
         <a href="#home" data-i18n="nav.home">Início</a>
         <a href="#house" data-i18n="nav.house">A casa</a>
@@ -24,6 +26,7 @@
         <a href="#location" data-i18n="nav.location">Localização</a>
         <a href="#about" data-i18n="nav.about">Quem somos</a>
       </nav>
+
       <div class="header-actions">
         <div class="language-picker">
           <button class="language-button" type="button" aria-expanded="false" aria-controls="language-menu" aria-label="Escolher idioma">
@@ -32,16 +35,17 @@
             <svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1 5 5 5-5"/></svg>
           </button>
           <div class="language-menu" id="language-menu" role="menu" hidden>
-            <button type="button" role="menuitem" data-language="pt"><span class="language-option-code" aria-hidden="true">PT</span><span><strong>Português</strong><small>Brasil</small></span><i aria-hidden="true">✓</i></button>
-            <button type="button" role="menuitem" data-language="en"><span class="language-option-code" aria-hidden="true">EN</span><span><strong>English</strong><small>United States</small></span><i aria-hidden="true"></i></button>
+            <button type="button" role="menuitem" data-language="pt"><span class="language-option-code">PT</span><span><strong>Português</strong><small>Brasil</small></span><i>✓</i></button>
+            <button type="button" role="menuitem" data-language="en"><span class="language-option-code">EN</span><span><strong>English</strong><small>United States</small></span><i></i></button>
           </div>
         </div>
         <a class="button button-small" href="#booking" data-i18n="nav.book">Reservar</a>
         <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </div>
+
     <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação móvel" hidden>
       <a href="#home" data-i18n="nav.home">Início</a>
       <a href="#house" data-i18n="nav.house">A casa</a>
@@ -53,27 +57,183 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <img class="hero-image" src="assets/pool.jpg?v=3" alt="Piscina privativa da casa em Orlando" fetchpriority="high">
+    <section class="hero" id="home">
+      <img class="hero-image" src="assets/front-hd.jpg?v=5" alt="Fachada da casa Orlando Rent Homes no Bella Vida Resort" fetchpriority="high">
       <div class="hero-overlay"></div>
       <div class="hero-content shell">
-        <p class="eyebrow" data-i18n="hero.eyebrow">Kissimmee · Flórida</p>
-        <h1 id="hero-title" data-i18n="hero.title">Sua casa em Orlando, perto de tudo.</h1>
-        <p data-i18n="hero.text">Conforto para até 8 pessoas, piscina privativa e a Disney a poucos minutos.</p>
+        <p class="eyebrow">Bella Vida Resort · Kissimmee, Flórida</p>
+        <h1>Uma casa completa para viver Orlando com conforto.</h1>
+        <p>Quatro quartos, piscina privativa, condomínio com estrutura de resort e uma localização prática para parques, compras e restaurantes.</p>
         <div class="hero-actions">
-          <a class="button" href="#booking" data-i18n="hero.cta">Ver datas disponíveis</a>
-          <a class="text-link light" href="#gallery"><span data-i18n="hero.photos">Conhecer a casa</span></a>
+          <a class="button" href="#booking">Consultar datas</a>
+          <a class="text-link light" href="#house">Ver detalhes da casa</a>
         </div>
       </div>
-      <div class="quick-facts shell" aria-label="Destaques da casa">
-        <div><strong>8</strong><span data-i18n="facts.guests">hóspedes</span></div>
-        <div><strong>4</strong><span data-i18n="facts.bedrooms">quartos</span></div>
-        <div><strong>3</strong><span data-i18n="facts.bathrooms">banheiros</span></div>
-        <div><strong>10 min</strong><span data-i18n="facts.disney">da Disney</span></div>
+
+      <div class="quick-facts shell">
+        <div><strong>8</strong><span>hóspedes</span></div>
+        <div><strong>4</strong><span>quartos</span></div>
+        <div><strong>3</strong><span>banheiros</span></div>
+        <div><strong>Privativa</strong><span>piscina</span></div>
       </div>
     </section>
 
-    <section class="booking-section section" id="booking" aria-labelledby="booking-title">
+    <section class="legacy-intro section">
+      <div class="shell legacy-grid">
+        <div>
+          <p class="eyebrow dark">Sua hospedagem em Orlando</p>
+          <h2>Mais espaço, liberdade e privacidade do que um hotel.</h2>
+        </div>
+        <div class="legacy-copy">
+          <p>A Orlando Rent Homes nasceu da experiência de um casal de brasileiros apaixonado por Orlando, pelos parques da Disney e da Universal, pelos shoppings e outlets e por tudo o que a cidade oferece.</p>
+          <p>Depois de várias estadias em hotéis, surgiu a vontade de ter um lugar mais aconchegante, onde fosse possível preparar refeições, descansar com calma, reunir a família e se sentir realmente em casa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section house-section" id="house">
+      <div class="shell section-heading split-heading">
+        <div>
+          <p class="eyebrow dark">Fotos e detalhes da casa</p>
+          <h2>Preparada para receber sua família em cada detalhe.</h2>
+        </div>
+        <p class="lead">Uma casa de 4 quartos no Bella Vida Resort, equipada para férias em família e estadias com amigos, com ambientes integrados, piscina privativa e vista agradável.</p>
+      </div>
+
+      <div class="shell detail-grid">
+        <article class="detail-card">
+          <h3>4 quartos confortáveis</h3>
+          <p>Ambientes preparados para descanso depois de um dia inteiro nos parques, com espaço para até 8 hóspedes.</p>
+        </article>
+        <article class="detail-card">
+          <h3>Piscina privativa</h3>
+          <p>Área exclusiva para a família aproveitar o dia com mais privacidade e tranquilidade.</p>
+        </article>
+        <article class="detail-card">
+          <h3>Cozinha completa</h3>
+          <p>Estrutura para preparar café da manhã, refeições rápidas e jantares sem depender de restaurante todos os dias.</p>
+        </article>
+        <article class="detail-card">
+          <h3>Salas integradas</h3>
+          <p>Estar e jantar conectados para reunir todos com conforto durante a viagem.</p>
+        </article>
+        <article class="detail-card">
+          <h3>Wi‑Fi e entretenimento</h3>
+          <p>Conectividade para planejar passeios, trabalhar quando necessário e relaxar em casa.</p>
+        </article>
+        <article class="detail-card">
+          <h3>Estacionamento</h3>
+          <p>Praticidade para quem aluga carro e quer entrar e sair do condomínio com facilidade.</p>
+        </article>
+      </div>
+
+      <div class="shell house-showcase">
+        <figure class="showcase-large"><img src="assets/pool.jpg?v=5" alt="Piscina privativa da casa"><figcaption>Piscina privativa</figcaption></figure>
+        <figure><img src="assets/dining.jpg?v=5" alt="Sala de jantar"><figcaption>Sala de jantar</figcaption></figure>
+        <figure><img src="assets/kitchen.jpg?v=5" alt="Cozinha da casa"><figcaption>Cozinha equipada</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="resort-section section">
+      <div class="shell resort-grid">
+        <div class="resort-copy">
+          <p class="eyebrow">Bella Vida Resort</p>
+          <h2>Estrutura de condomínio para aproveitar também fora dos parques.</h2>
+          <p>O Bella Vida Resort complementa a estadia com áreas de lazer e conveniência para os dias de descanso.</p>
+          <ul class="check-list">
+            <li>Club House</li>
+            <li>Academia</li>
+            <li>Piscina do condomínio</li>
+            <li>Quadras esportivas</li>
+            <li>Playground</li>
+            <li>Salão de convivência</li>
+            <li>Área de jogos</li>
+            <li>Segurança no condomínio</li>
+          </ul>
+        </div>
+        <img src="assets/front.jpg?v=5" alt="Fachada da casa no Bella Vida Resort">
+      </div>
+    </section>
+
+    <section class="gallery-section section" id="gallery">
+      <div class="shell section-heading">
+        <div>
+          <p class="eyebrow dark">Galeria</p>
+          <h2 id="gallery-title">Conheça os ambientes da casa.</h2>
+        </div>
+        <button class="text-link" id="show-all" type="button">Abrir galeria</button>
+      </div>
+      <div class="shell gallery-grid">
+        <button class="gallery-item gallery-main" data-full="assets/pool.jpg?v=5"><img src="assets/pool.jpg?v=5" alt="Piscina privativa" loading="lazy"></button>
+        <button class="gallery-item" data-full="assets/front-hd.jpg?v=5"><img src="assets/front-hd.jpg?v=5" alt="Fachada da casa" loading="lazy"></button>
+        <button class="gallery-item" data-full="assets/dining.jpg?v=5"><img src="assets/dining.jpg?v=5" alt="Sala de jantar" loading="lazy"></button>
+        <button class="gallery-item" data-full="assets/kitchen.jpg?v=5"><img src="assets/kitchen.jpg?v=5" alt="Cozinha" loading="lazy"></button>
+      </div>
+      <p class="shell gallery-note">Novas fotos podem ser acrescentadas sem mudar a estrutura da página.</p>
+    </section>
+
+    <section class="section location-section" id="location">
+      <div class="shell section-heading split-heading">
+        <div>
+          <p class="eyebrow dark">Localização</p>
+          <h2>Perto do que faz parte da viagem.</h2>
+        </div>
+        <p class="lead">A casa fica em Kissimmee, com acesso prático às principais atrações de Orlando, centros de compras, supermercados e restaurantes.</p>
+      </div>
+
+      <div class="shell nearby-grid">
+        <article class="nearby-card">
+          <span class="nearby-kicker">Parques Disney</span>
+          <h3>Walt Disney World</h3>
+          <ul>
+            <li><span>Magic Kingdom</span><strong>aprox. 25–30 min</strong></li>
+            <li><span>EPCOT</span><strong>aprox. 20–25 min</strong></li>
+            <li><span>Hollywood Studios</span><strong>aprox. 20–25 min</strong></li>
+            <li><span>Animal Kingdom</span><strong>aprox. 20–25 min</strong></li>
+            <li><span>Disney Springs</span><strong>aprox. 15–20 min</strong></li>
+          </ul>
+        </article>
+
+        <article class="nearby-card">
+          <span class="nearby-kicker">Universal e outros parques</span>
+          <h3>Mais atrações</h3>
+          <ul>
+            <li><span>Universal Studios Florida</span><strong>aprox. 25–30 min</strong></li>
+            <li><span>Islands of Adventure</span><strong>aprox. 25–30 min</strong></li>
+            <li><span>Volcano Bay</span><strong>aprox. 25–30 min</strong></li>
+            <li><span>SeaWorld Orlando</span><strong>aprox. 20–25 min</strong></li>
+            <li><span>Discovery Cove</span><strong>aprox. 20–25 min</strong></li>
+            <li><span>LEGOLAND Florida</span><strong>aprox. 45–55 min</strong></li>
+          </ul>
+        </article>
+
+        <article class="nearby-card">
+          <span class="nearby-kicker">Compras</span>
+          <h3>Shoppings e outlets</h3>
+          <ul>
+            <li><span>The Loop</span><strong>aprox. 10–15 min</strong></li>
+            <li><span>Lake Buena Vista Factory Stores</span><strong>aprox. 15–20 min</strong></li>
+            <li><span>Orlando Vineland Premium Outlets</span><strong>aprox. 20–25 min</strong></li>
+            <li><span>Orlando International Premium Outlets</span><strong>aprox. 30 min</strong></li>
+            <li><span>Walmart</span><strong>poucos minutos</strong></li>
+          </ul>
+        </article>
+
+        <article class="nearby-card">
+          <span class="nearby-kicker">Comodidade</span>
+          <h3>Restaurantes e serviços</h3>
+          <ul>
+            <li><span>Restaurantes na US‑192</span><strong>aprox. 5–15 min</strong></li>
+            <li><span>Farmácias e mercados</span><strong>aprox. 5–10 min</strong></li>
+            <li><span>Fast food e cafés</span><strong>aprox. 5–10 min</strong></li>
+            <li><span>Old Town Kissimmee</span><strong>aprox. 15 min</strong></li>
+          </ul>
+        </article>
+      </div>
+      <p class="shell distance-note">Tempos aproximados de carro e sujeitos a trânsito, horário e rota.</p>
+    </section>
+
+    <section class="section booking-section" id="booking">
       <div class="shell booking-grid">
         <div class="booking-copy">
           <p class="eyebrow dark" data-i18n="booking.eyebrow">Planeje sua estadia</p>
@@ -103,87 +263,78 @@
       </div>
     </section>
 
-    <section class="section house-section" id="house">
-      <div class="shell intro-grid">
-        <div>
-          <p class="eyebrow dark" data-i18n="house.eyebrow">Bella Vida Resort</p>
-          <h2 data-i18n="house.title">Espaço, privacidade e conforto para toda a família.</h2>
-        </div>
-        <p class="lead" data-i18n="house.text">Uma casa completa de 4 quartos, pensada para você descansar depois dos parques, cozinhar com tranquilidade e aproveitar Orlando no seu ritmo.</p>
-      </div>
-      <div class="shell feature-grid">
-        <article><span class="icon">⌂</span><h3 data-i18n="features.poolTitle">Piscina privativa</h3><p data-i18n="features.poolText">Área protegida e opção de aquecimento para aproveitar em qualquer época.</p></article>
-        <article><span class="icon">◇</span><h3 data-i18n="features.kitchenTitle">Cozinha completa</h3><p data-i18n="features.kitchenText">Utensílios, eletrodomésticos e bancada integrada às salas de estar e jantar.</p></article>
-        <article><span class="icon">◉</span><h3 data-i18n="features.resortTitle">Estrutura de resort</h3><p data-i18n="features.resortText">Clubhouse, piscina, spa, academia, playground, quadras e segurança 24h.</p></article>
-        <article><span class="icon">⌁</span><h3 data-i18n="features.connectedTitle">Tudo conectado</h3><p data-i18n="features.connectedText">Wi-Fi, TV a cabo, ar-condicionado central e estacionamento em frente à casa.</p></article>
-      </div>
-    </section>
-
-    <section class="gallery-section section" id="gallery" aria-labelledby="gallery-title">
-      <div class="shell section-heading">
-        <div><p class="eyebrow" data-i18n="gallery.eyebrow">Conheça cada detalhe</p><h2 id="gallery-title" data-i18n="gallery.title">Uma casa feita para viver bons momentos.</h2></div>
-        <button class="text-link" id="show-all" type="button"><span data-i18n="gallery.cta">Ver todas as fotos</span></button>
-      </div>
-      <div class="shell gallery-grid">
-        <button class="gallery-item gallery-main" data-full="assets/pool.jpg?v=3"><img src="assets/pool.jpg?v=3" alt="Piscina privativa" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/front.jpg?v=3"><img src="assets/front.jpg?v=3" alt="Fachada da casa" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/dining.jpg?v=3"><img src="assets/dining.jpg?v=3" alt="Sala de jantar" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/kitchen.jpg?v=3"><img src="assets/kitchen.jpg?v=3" alt="Cozinha e bancada" loading="lazy"></button>
-      </div>
-    </section>
-
-    <section class="section location-section" id="location">
-      <div class="shell location-grid">
-        <div class="location-card">
-          <p class="eyebrow dark" data-i18n="location.eyebrow">Localização estratégica</p>
-          <h2 data-i18n="location.title">Mais tempo aproveitando. Menos tempo no caminho.</h2>
-          <p data-i18n="location.text">No Bella Vida Resort, em Kissimmee, perto dos parques, outlets, supermercados e restaurantes.</p>
-          <ul class="distance-list">
-            <li><span>Disney's Hollywood Studios</span><strong>10,6 min</strong></li>
-            <li><span>Disney Springs</span><strong>5,8 min</strong></li>
-            <li><span>Walmart</span><strong>0,3 min</strong></li>
-            <li><span>Universal Studios</span><strong>15,6 min</strong></li>
-          </ul>
-        </div>
-        <img src="assets/front-hd.jpg?v=4" alt="Casa Orlando Rent Homes no Bella Vida Resort" loading="lazy">
-      </div>
-    </section>
-
     <section class="section about-section" id="about">
       <div class="shell about-grid">
         <div>
-          <p class="eyebrow" data-i18n="about.eyebrow">De brasileiros para brasileiros</p>
-          <h2 data-i18n="about.title">A experiência de Orlando com o conforto de casa.</h2>
+          <p class="eyebrow dark">Quem somos</p>
+          <h2>De brasileiros para famílias que querem aproveitar Orlando de outro jeito.</h2>
         </div>
-        <div>
-          <p data-i18n="about.text1">Somos um casal de brasileiros apaixonado por Orlando. Depois de muitas estadias em hotéis, percebemos que faltava espaço, privacidade e a liberdade de viver a viagem no nosso ritmo.</p>
-          <p data-i18n="about.text2">Por isso, preparamos esta casa no Bella Vida Resort para receber famílias com cuidado, segurança e tudo o que também gostaríamos de encontrar nas nossas férias.</p>
-          <a class="button button-outline" href="#booking" data-i18n="about.cta">Quero conhecer as datas</a>
+        <div class="about-copy">
+          <p>Somos um casal de brasileiros que adora Orlando, os parques da Disney e da Universal e as opções de compras da cidade.</p>
+          <p>Depois de conhecer vários hotéis, percebemos que buscávamos algo a mais: um lugar onde pudéssemos cozinhar, ter mais conforto, reduzir despesas e realmente nos sentir em casa.</p>
+          <p>Foi assim que escolhemos uma casa de 4 quartos com piscina privativa no Bella Vida Resort, especialmente decorada e equipada para receber famílias com conforto.</p>
+          <a class="button button-outline" href="#booking">Consultar disponibilidade</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-section section">
+      <div class="shell">
+        <p class="eyebrow dark">Uma estadia com jeito de casa</p>
+        <h2>Conforto para descansar e liberdade para aproveitar a viagem no seu ritmo.</h2>
+        <div class="testimonial-grid">
+          <blockquote>“A proposta é simples: reunir a família em um lugar confortável, perto das atrações e com tudo o que você precisa para viver bem os dias em Orlando.”</blockquote>
+          <div class="testimonial-side">
+            <strong>Casa completa</strong>
+            <span>para férias em família</span>
+            <strong>Condomínio estruturado</strong>
+            <span>para dias de descanso</span>
+            <strong>Localização prática</strong>
+            <span>para parques, compras e refeições</span>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="cta-section">
       <div class="shell cta-inner">
-        <div><p class="eyebrow" data-i18n="cta.eyebrow">Sua viagem começa aqui</p><h2 data-i18n="cta.title">Pronto para viver Orlando do seu jeito?</h2></div>
-        <a class="button button-light" href="#booking" data-i18n="cta.button">Consultar disponibilidade</a>
+        <div>
+          <p class="eyebrow">Sua viagem começa aqui</p>
+          <h2>Consulte as datas e fale diretamente pelo WhatsApp.</h2>
+        </div>
+        <a class="button button-light" href="#booking">Ver disponibilidade</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="shell footer-grid">
-      <div class="footer-brand"><img src="assets/logo-orlando-rent-homes-transparente.png?v=1" alt="Orlando Rent Homes" width="1774" height="887"><p data-i18n="footer.text">Conforto, privacidade e uma localização perfeita para suas férias em Orlando.</p></div>
-      <div><h3 data-i18n="footer.links">Links</h3><a href="#house" data-i18n="nav.house">A casa</a><a href="#gallery" data-i18n="nav.gallery">Fotos</a><a href="#booking" data-i18n="nav.book">Reservar</a></div>
-      <div><h3 data-i18n="footer.contact">Contato</h3><a href="https://wa.me/5511999066659" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.instagram.com/orlando_rent_homes/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/orlandorenthomes" target="_blank" rel="noopener">Facebook</a></div>
+      <div class="footer-brand">
+        <img src="assets/logo-orlando-rent-homes-transparente.png?v=2" alt="Orlando Rent Homes">
+        <p>Casa de temporada em Kissimmee para aproveitar Orlando com conforto, privacidade e praticidade.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <a href="#house">A casa</a>
+        <a href="#gallery">Fotos</a>
+        <a href="#location">Localização</a>
+        <a href="#booking">Reservas</a>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <a href="https://wa.me/5511999066659" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/orlando_rent_homes/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/orlandorenthomes" target="_blank" rel="noopener">Facebook</a>
+      </div>
     </div>
-    <div class="shell footer-bottom"><span>© <span id="year"></span> Orlando Rent Homes.</span><span>Desenvolvido por <a href="https://a2a.com.br/" target="_blank" rel="noopener">A2A Comunicação</a></span></div>
+    <div class="shell footer-bottom">
+      <span>© <span id="year"></span> Orlando Rent Homes.</span>
+      <span>Desenvolvido por <a href="https://a2a.com.br/" target="_blank" rel="noopener">A2A Comunicação</a></span>
+    </div>
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/5511999066659" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
-    <svg viewBox="0 0 16 16" aria-hidden="true">
-      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.607M7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.932 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.514.646-.63.775-.116.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.986-1.175-1.103-1.372-.116-.198-.013-.304.086-.403.09-.088.197-.232.296-.35.099-.116.133-.197.198-.329.065-.133.034-.247-.016-.346l-.627-1.513c-.165-.398-.332-.342-.445-.348-.116-.006-.247-.006-.38-.006a.729.729 0 0 0-.527.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.203.84.324 1.129.415.474.151.904.129 1.244.078.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.116-.943-.05-.084-.182-.133-.38-.232"/>
-    </svg>
+    <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.607M7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.932 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.514.646-.63.775-.116.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.986-1.175-1.103-1.372-.116-.198-.013-.304.086-.403.09-.088.197-.232.296-.35.099-.116.133-.197.198-.329.065-.133.034-.247-.016-.346l-.627-1.513c-.165-.398-.332-.342-.445-.348-.116-.006-.247-.006-.38-.006a.729.729 0 0 0-.527.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.203.84.324 1.129.415.474.151.904.129 1.244.078.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.116-.943-.05-.084-.182-.133-.38-.232"/></svg>
   </a>
 
   <dialog class="lightbox" id="lightbox">

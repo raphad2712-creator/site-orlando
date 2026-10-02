@@ -33,6 +33,27 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape')closeLanguag
 
 const menuButton=document.querySelector('.menu-button');const mobileNav=document.querySelector('#mobile-nav');menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!open));mobileNav.hidden=open});mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileNav.hidden=true;menuButton.setAttribute('aria-expanded','false')}));
 
+const carousel=document.querySelector('.hero-carousel');
+const carouselSlides=[...document.querySelectorAll('.carousel-slide')];
+const carouselDots=[...document.querySelectorAll('.carousel-dots button')];
+let currentSlide=0;
+let carouselTimer;
+function showSlide(index){
+  currentSlide=(index+carouselSlides.length)%carouselSlides.length;
+  carouselSlides.forEach((slide,i)=>{const active=i===currentSlide;slide.classList.toggle('is-active',active);slide.setAttribute('aria-hidden',String(!active))});
+  carouselDots.forEach((dot,i)=>{const active=i===currentSlide;dot.classList.toggle('is-active',active);dot.setAttribute('aria-selected',String(active))});
+}
+function startCarousel(){clearInterval(carouselTimer);carouselTimer=setInterval(()=>showSlide(currentSlide+1),5500)}
+document.querySelector('.carousel-prev').addEventListener('click',()=>{showSlide(currentSlide-1);startCarousel()});
+document.querySelector('.carousel-next').addEventListener('click',()=>{showSlide(currentSlide+1);startCarousel()});
+carouselDots.forEach((dot,index)=>dot.addEventListener('click',()=>{showSlide(index);startCarousel()}));
+carousel.addEventListener('mouseenter',()=>clearInterval(carouselTimer));
+carousel.addEventListener('mouseleave',startCarousel);
+carousel.addEventListener('focusin',()=>clearInterval(carouselTimer));
+carousel.addEventListener('focusout',startCarousel);
+carousel.addEventListener('keydown',event=>{if(event.key==='ArrowLeft')showSlide(currentSlide-1);if(event.key==='ArrowRight')showSlide(currentSlide+1)});
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)startCarousel();
+
 const dayNames={pt:['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'],en:['Sun','Mon','Tue','Wed','Thu','Fri','Sat']};
 const calendar=document.querySelector('#calendar');
 function startOfDay(date){return new Date(date.getFullYear(),date.getMonth(),date.getDate())}

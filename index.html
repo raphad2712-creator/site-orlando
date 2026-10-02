@@ -7,7 +7,7 @@
   <meta name="description" content="Casa de temporada em Orlando no Bella Vida Resort, com 4 quartos, piscina privativa, estrutura de resort e fácil acesso aos principais parques, compras e restaurantes.">
   <title>Orlando Rent Homes | Casa de temporada em Orlando</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -57,26 +57,58 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="home">
-      <img class="hero-image" src="assets/front-hd.jpg?v=5" alt="Fachada da casa Orlando Rent Homes no Bella Vida Resort" fetchpriority="high">
-      <div class="hero-overlay"></div>
-      <div class="hero-content shell">
-        <p class="eyebrow">Bella Vida Resort · Kissimmee, Flórida</p>
-        <h1>Uma casa completa para viver Orlando com conforto.</h1>
-        <p>Quatro quartos, piscina privativa, condomínio com estrutura de resort e uma localização prática para parques, compras e restaurantes.</p>
-        <div class="hero-actions">
-          <a class="button" href="#booking">Consultar datas</a>
-          <a class="text-link light" href="#house">Ver detalhes da casa</a>
-        </div>
+    <section class="hero-carousel" id="home" aria-label="Fotos da Orlando Rent Homes">
+      <div class="carousel-track">
+        <figure class="carousel-slide is-active" aria-hidden="false">
+          <img src="assets/carousel-kitchen.jpg" alt="Cozinha completa com bancada da Orlando Rent Homes" fetchpriority="high">
+        </figure>
+        <figure class="carousel-slide" aria-hidden="true">
+          <img src="assets/carousel-pool.jpg" alt="Piscina privativa da Orlando Rent Homes">
+        </figure>
+        <figure class="carousel-slide" aria-hidden="true">
+          <img src="assets/carousel-front.jpg" alt="Fachada da casa no Bella Vida Resort">
+        </figure>
+        <figure class="carousel-slide" aria-hidden="true">
+          <img src="assets/carousel-dining.jpg" alt="Sala de jantar preparada para receber a família">
+        </figure>
+        <figure class="carousel-slide" aria-hidden="true">
+          <img src="assets/carousel-bedroom.jpg" alt="Quarto confortável da casa">
+        </figure>
       </div>
 
-      <div class="quick-facts shell">
-        <div><strong>8</strong><span>hóspedes</span></div>
-        <div><strong>4</strong><span>quartos</span></div>
-        <div><strong>3</strong><span>banheiros</span></div>
-        <div><strong>Privativa</strong><span>piscina</span></div>
+      <button class="carousel-arrow carousel-prev" type="button" aria-label="Foto anterior">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4-8 8 8 8"/></svg>
+      </button>
+      <button class="carousel-arrow carousel-next" type="button" aria-label="Próxima foto">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8"/></svg>
+      </button>
+
+      <div class="carousel-dots" role="tablist" aria-label="Escolher foto">
+        <button class="is-active" type="button" role="tab" aria-selected="true" aria-label="Mostrar foto 1"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Mostrar foto 2"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Mostrar foto 3"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Mostrar foto 4"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Mostrar foto 5"></button>
       </div>
     </section>
+
+    <section class="availability-callout" aria-labelledby="availability-title">
+      <div class="shell availability-inner">
+        <div>
+          <p class="eyebrow dark">Sua casa em Orlando</p>
+          <h1 id="availability-title">Conforto, espaço e piscina privativa para toda a família.</h1>
+          <p>Consulte o calendário com as datas disponíveis e solicite seu orçamento.</p>
+        </div>
+        <a class="button" href="#booking">Consultar disponibilidade</a>
+      </div>
+    </section>
+
+    <div class="quick-facts shell" aria-label="Principais características da casa">
+      <div><strong>8</strong><span>hóspedes</span></div>
+      <div><strong>4</strong><span>quartos</span></div>
+      <div><strong>3</strong><span>banheiros</span></div>
+      <div><strong>Privativa</strong><span>piscina</span></div>
+    </div>
 
     <section class="legacy-intro section">
       <div class="shell legacy-grid">
@@ -128,9 +160,9 @@
       </div>
 
       <div class="shell house-showcase">
-        <figure class="showcase-large"><img src="assets/pool.jpg?v=5" alt="Piscina privativa da casa"><figcaption>Piscina privativa</figcaption></figure>
-        <figure><img src="assets/dining.jpg?v=5" alt="Sala de jantar"><figcaption>Sala de jantar</figcaption></figure>
-        <figure><img src="assets/kitchen.jpg?v=5" alt="Cozinha da casa"><figcaption>Cozinha equipada</figcaption></figure>
+        <figure class="showcase-large"><img src="assets/carousel-pool.jpg" alt="Piscina privativa da casa"><figcaption>Piscina privativa</figcaption></figure>
+        <figure><img src="assets/carousel-dining.jpg" alt="Sala de jantar"><figcaption>Sala de jantar</figcaption></figure>
+        <figure><img src="assets/carousel-kitchen.jpg" alt="Cozinha da casa"><figcaption>Cozinha equipada</figcaption></figure>
       </div>
     </section>
 
@@ -151,7 +183,7 @@
             <li>Segurança no condomínio</li>
           </ul>
         </div>
-        <img src="assets/front.jpg?v=5" alt="Fachada da casa no Bella Vida Resort">
+        <img src="assets/carousel-front.jpg" alt="Fachada da casa no Bella Vida Resort">
       </div>
     </section>
 
@@ -164,10 +196,10 @@
         <button class="text-link" id="show-all" type="button">Abrir galeria</button>
       </div>
       <div class="shell gallery-grid">
-        <button class="gallery-item gallery-main" data-full="assets/pool.jpg?v=5"><img src="assets/pool.jpg?v=5" alt="Piscina privativa" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/front-hd.jpg?v=5"><img src="assets/front-hd.jpg?v=5" alt="Fachada da casa" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/dining.jpg?v=5"><img src="assets/dining.jpg?v=5" alt="Sala de jantar" loading="lazy"></button>
-        <button class="gallery-item" data-full="assets/kitchen.jpg?v=5"><img src="assets/kitchen.jpg?v=5" alt="Cozinha" loading="lazy"></button>
+        <button class="gallery-item gallery-main" data-full="assets/carousel-pool.jpg"><img src="assets/carousel-pool.jpg" alt="Piscina privativa" loading="lazy"></button>
+        <button class="gallery-item" data-full="assets/carousel-front.jpg"><img src="assets/carousel-front.jpg" alt="Fachada da casa" loading="lazy"></button>
+        <button class="gallery-item" data-full="assets/carousel-dining.jpg"><img src="assets/carousel-dining.jpg" alt="Sala de jantar" loading="lazy"></button>
+        <button class="gallery-item" data-full="assets/carousel-kitchen.jpg"><img src="assets/carousel-kitchen.jpg" alt="Cozinha" loading="lazy"></button>
       </div>
       <p class="shell gallery-note">Novas fotos podem ser acrescentadas sem mudar a estrutura da página.</p>
     </section>
